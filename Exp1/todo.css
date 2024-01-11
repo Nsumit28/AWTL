@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  #todo-list {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .task {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .task:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-left: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  button.delete {
+    background-color: #e74c3c;
+  }
+  
+  button.complete {
+    background-color: #2ecc71;
+  }
+  
+  button.delete:hover, button.complete:hover {
+    transform: scale(1.1);
+  }
+  
