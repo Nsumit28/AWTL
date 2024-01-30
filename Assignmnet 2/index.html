@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Shop</title>
+
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    body {
+      padding-top: 56px;
+    }
+
+    nav {
+      background-color: #73c9b8;
+    }
+
+    
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    
+    #home {
+      background-color: #f7ede2;
+      padding-bottom: 1000px;
+    }
+
+
+    #about {
+      background-color: #f2f2f2;
+      padding-bottom: 1000px;
+    }
+
+   
+    #contact {
+      background-color: #ffcccb;
+      padding-bottom: 1000px;
+    }
+
+    /* Hide navigation bar on scroll down */
+    nav.hidden {
+      top: -56px; /* Adjusted for Bootstrap fixed navbar */
+    }
+
+    /* Fade in and slide up animation */
+    nav.visible {
+      top: 0;
+      animation: fadeInSlideUp 0.7s ease-out;
+    }
+
+    @keyframes fadeInSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <a class="navbar-brand" href="#">Flower Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="container">
+      <h2>Welcome to Our Flower Shop</h2>
+      <p>Explore a variety of beautiful flowers for every occasion.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Discover the story behind our passion for flowers and nature.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Get in touch with our team to order your favorite flowers.</p>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  
+  <script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector('.navbar');
+
+    window.onscroll = function() {
+      const currentScrollPos = window.pageYOffset;
+
+      // Scroll down
+      if (prevScrollPos < currentScrollPos && currentScrollPos > 56) {
+        navbar.classList.add('hidden');
+      } else {
+        // Scroll up or close to the top
+        navbar.classList.remove('hidden');
+        navbar.classList.add('visible');
+      }
+
+      prevScrollPos = currentScrollPos;
+    };
+  </script>
+</body>
+</html>
