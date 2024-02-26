@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Application</title>
+    <link rel="stylesheet" href="tm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="board" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>To Do</h2>
+            <ul id="todo-list" class="task-list" ondragstart="drag(event)" draggable="true"></ul>
+        </div>
+        <div class="board" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>In Progress</h2>
+            <ul id="inprogress-list" class="task-list" ondragstart="drag(event)" draggable="true"></ul>
+        </div>
+        <div class="board" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Done</h2>
+            <ul id="done-list" class="task-list" ondragstart="drag(event)" draggable="true"></ul>
+        </div>
+    </div>
+    <script src="tm.js"></script>
+</body>
+</html>
